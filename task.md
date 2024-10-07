@@ -2,7 +2,7 @@
 
 1. create a new branch from the current one _hw1_
 2. inside folder _homework1_ create all your files
-3. create 4 files: `index.html` and `styles.css` inside. Also add 2 `screenshots`
+3. Example: `index.html`, `styles.css`, `images` e.t.c.
 4. In those files implement layout according to design from this link: https://www.figma.com/file/yHGr3hIT8Tc3FYqjMXyMqS/artSchool?node-id=0%3A1
 5. once done, create pull request into current branch _hw1_
 
