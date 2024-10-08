@@ -7,5 +7,114 @@
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <img src="./images/logo-SA-1.svg" alt="Simple Art logo" />
+        </div>
+        <div class="header__bar">
+          <nav class="header__navigation">
+            <ul>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Teachers</a></li>
+              <li><a href="#">Prices</a></li>
+              <li><a href="#">About us</a></li>
+            </ul>
+          </nav>
+          <button class="btn">Apply now</button>
+          <div class="header__burger">
+            <div class="header__burger-box">
+              <div class="header__burger-inner"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="propositions">
+          <article class="propositions__item">
+            <div class="propositions__item-text-content">
+              <h2 class="propositions__item-title">
+                Desperate to learn drawing? We’ll teach you!
+              </h2>
+              <p>
+                Our school has more than 20 years of experience in teaching
+                people who always thought that they don’t have even a slightest
+                hint of a talent. Some other descriptive stuff that I’m too lazy
+                to make up.
+              </p>
+              <p>With us you will get:</p>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>Vestibulum commodo id amet non facilisis in.</li>
+                <li>
+                  Est eros, vestibulum cursus luctus luctus aenean molestie.
+                </li>
+                <li>
+                  Augue ultricies non tristique malesuada justo neque mi,
+                  pellentesque lacus.
+                </li>
+              </ul>
+              <button class="btn btn--big">Apply now</button>
+            </div>
+            <div class="proposition__image">
+              <picture>
+                <source
+                  media="(min-width: 900px)"
+                  srcset="./images/desktop/paris_1.webp"
+                />
+                <img
+                  src="./images/mobile/paris_1.webp"
+                  alt="Bright spring coloured painted picture of Eiffel tower with blossoming trees in the front and pink-and-blue slightly cloudy sky."
+                />
+              </picture>
+            </div>
+          </article>
+          <article class="propositions__item">
+            <div class="propositions__item-text-content">
+              <h2
+                class="propositions__item-title propositions__item-title--small"
+              >
+                Interested but currently have other plans?
+              </h2>
+              <p>
+                Subscribe to our newsletter to stay tuned and get hottest
+                updates and deals
+              </p>
+              <button class="btn">Subscribe</button>
+            </div>
+            <div class="proposition__image">
+              <picture>
+                <source
+                  media="(min-width: 900px)"
+                  srcset="./images/desktop/8474887_old_letter_1.webp"
+                />
+                <img
+                  src="./images/mobile/8474887_old_letter_1.webp"
+                  alt="Painted picture of letter with pen and small black ink bottle on the top of it."
+                />
+              </picture>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__copyright">
+          <p>&copy; Simple Art, Inc. 2021</p>
+          <p>All rights reserved</p>
+        </div>
+        <ul class="footer__policies">
+          <li><a class="footer__policies-link" href="#">Terms</a></li>
+          <li><a class="footer__policies-link" href="#">Privacy policy</a></li>
+          <li>
+            <a class="footer__policies-link" href="#">Help &amp; Support</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
