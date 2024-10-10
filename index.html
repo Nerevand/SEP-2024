@@ -11,23 +11,34 @@
     <div class="container">
       <header class="header">
         <div class="header__logo">
-          <img src="./images/logo-SA-1.svg" alt="Simple Art logo" />
+          <a href="#">
+            <img src="./images/logo-SA-1.svg" alt="Simple Art logo" />
+          </a>
         </div>
         <div class="header__bar">
           <nav class="header__navigation">
-            <ul>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Teachers</a></li>
-              <li><a href="#">Prices</a></li>
-              <li><a href="#">About us</a></li>
+            <ul class="header__navigation-list list">
+              <li class="header__navigation-list-item">
+                <a class="header__navigation-link" href="#">Courses</a>
+              </li>
+              <li class="header__navigation-list-item">
+                <a class="header__navigation-link" href="#">Teachers</a>
+              </li>
+              <li class="header__navigation-list-item">
+                <a class="header__navigation-link" href="#">Prices</a>
+              </li>
+              <li class="header__navigation-list-item">
+                <a class="header__navigation-link" href="#">About us</a>
+              </li>
             </ul>
           </nav>
-          <button class="btn">Apply now</button>
-          <div class="header__burger">
-            <div class="header__burger-box">
+          <button class="btn btn--slim header__btn">Apply now</button>
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle">
+            <div class="header__burger">
               <div class="header__burger-inner"></div>
             </div>
-          </div>
+          </label>
         </div>
       </header>
 
@@ -35,7 +46,9 @@
         <section class="propositions">
           <article class="propositions__item">
             <div class="propositions__item-text-content">
-              <h2 class="propositions__item-title">
+              <h2
+                class="propositions__item-title propositions__item-title--big"
+              >
                 Desperate to learn drawing? We’ll teach you!
               </h2>
               <p>
@@ -46,14 +59,16 @@
               </p>
               <p>With us you will get:</p>
               <ul>
-                <li>
+                <li class="propositions__list-item">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </li>
-                <li>Vestibulum commodo id amet non facilisis in.</li>
-                <li>
+                <li class="propositions__list-item">
+                  Vestibulum commodo id amet non facilisis in.
+                </li>
+                <li class="propositions__list-item">
                   Est eros, vestibulum cursus luctus luctus aenean molestie.
                 </li>
-                <li>
+                <li class="propositions__list-item">
                   Augue ultricies non tristique malesuada justo neque mi,
                   pellentesque lacus.
                 </li>
@@ -75,9 +90,7 @@
           </article>
           <article class="propositions__item">
             <div class="propositions__item-text-content">
-              <h2
-                class="propositions__item-title propositions__item-title--small"
-              >
+              <h2 class="propositions__item-title">
                 Interested but currently have other plans?
               </h2>
               <p>
@@ -103,17 +116,23 @@
       </main>
 
       <footer class="footer">
-        <div class="footer__copyright">
-          <p>&copy; Simple Art, Inc. 2021</p>
-          <p>All rights reserved</p>
+        <div class="footer__inner">
+          <div class="footer__copyright">
+            <p class="footer__copyright-text">&copy; Simple Art, Inc. 2021</p>
+            <p class="footer__copyright-text">All rights reserved</p>
+          </div>
+          <ul class="footer__policies-list list">
+            <li class="footer__policies-list-item">
+              <a class="footer__policies-link" href="#">Terms</a>
+            </li>
+            <li class="footer__policies-list-item">
+              <a class="footer__policies-link" href="#">Privacy policy</a>
+            </li>
+            <li class="footer__policies-list-item">
+              <a class="footer__policies-link" href="#">Help &amp; Support</a>
+            </li>
+          </ul>
         </div>
-        <ul class="footer__policies">
-          <li><a class="footer__policies-link" href="#">Terms</a></li>
-          <li><a class="footer__policies-link" href="#">Privacy policy</a></li>
-          <li>
-            <a class="footer__policies-link" href="#">Help &amp; Support</a>
-          </li>
-        </ul>
       </footer>
     </div>
   </body>
