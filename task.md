@@ -12,6 +12,10 @@
 Sample Output:
 
 ```js
+function getType(value) {
+  // Your code goes here
+}
+
 getType(42); // 'number'
 getType("hello"); // 'string'
 ```
@@ -23,6 +27,10 @@ getType("hello"); // 'string'
 Sample Output:
 
 ```js
+function stringToArray(str) {
+  // Your code goes here
+}
+
 stringToArray("hello"); // ['h', 'e', 'l', 'l', 'o']
 ```
 
@@ -33,6 +41,10 @@ stringToArray("hello"); // ['h', 'e', 'l', 'l', 'o']
 Sample Output:
 
 ```js
+function mergeArrays(arr1, arr2) {
+  // Your code goes here
+}
+
 mergeArrays([1, 2], [2, 3]); // [1, 2, 3]
 ```
 
@@ -43,6 +55,10 @@ mergeArrays([1, 2], [2, 3]); // [1, 2, 3]
 Sample Output:
 
 ```js
+function deepCopy(obj) {
+  // Your code goes here
+}
+
 const obj = { a: 1, b: { c: 2 } };
 deepCopy(obj); // {a: 1, b: {c: 2}}
 ```
@@ -54,6 +70,10 @@ deepCopy(obj); // {a: 1, b: {c: 2}}
 Sample Output:
 
 ```js
+function filterStrings(obj) {
+  // Your code goes here
+}
+
 filterStrings({ a: 1, b: "text", c: true }); // {b: 'text'}
 ```
 
@@ -64,6 +84,10 @@ filterStrings({ a: 1, b: "text", c: true }); // {b: 'text'}
 Sample Output:
 
 ```js
+function convertNumbersToStrings(arr) {
+  // Your code goes here
+}
+
 convertNumbersToStrings([1, 2, 3]); // ['1', '2', '3']
 ```
 
@@ -74,6 +98,10 @@ convertNumbersToStrings([1, 2, 3]); // ['1', '2', '3']
 Sample Output:
 
 ```js
+function getUnique(arr) {
+  // Your code goes here
+}
+
 getUnique([1, 2, 2, 3, 3]); // [1, 2, 3]
 ```
 
@@ -84,6 +112,10 @@ getUnique([1, 2, 2, 3, 3]); // [1, 2, 3]
 Sample Output:
 
 ```js
+function isArray(value) {
+  // Your code goes here
+}
+
 isArray([1, 2, 3]); // true
 isArray("text"); // false
 ```
@@ -95,6 +127,10 @@ isArray("text"); // false
 Sample Output:
 
 ```js
+function objectToPairs(obj) {
+  // Your code goes here
+}
+
 objectToPairs({ a: 1, b: 2 }); // [['a', 1], ['b', 2]]
 ```
 
@@ -105,6 +141,10 @@ objectToPairs({ a: 1, b: 2 }); // [['a', 1], ['b', 2]]
 Sample Output:
 
 ```js
+function getAverage(arr) {
+  // Your code goes here
+}
+
 getAverage([10, 20, 30]); // 20
 ```
 
@@ -115,6 +155,10 @@ getAverage([10, 20, 30]); // 20
 Sample Output:
 
 ```js
+function mergeObjects(obj1, obj2) {
+  // Your code goes here
+}
+
 mergeObjects({ a: 1, b: 2 }, { b: 3, c: 4 }); // {a: 1, b: 3, c: 4}
 ```
 
@@ -125,8 +169,12 @@ mergeObjects({ a: 1, b: 2 }, { b: 3, c: 4 }); // {a: 1, b: 3, c: 4}
 Sample Output:
 
 ```js
-isEmpty({}); // true
-isEmpty({ a: 1 }); // false
+function isEmptyObject(obj) {
+  // Your code goes here
+}
+
+isEmptyObject({}); // true
+isEmptyObject({ a: 1 }); // false
 ```
 
 **TASK 13**
@@ -136,8 +184,12 @@ isEmpty({ a: 1 }); // false
 Sample Output:
 
 ```js
-areArraysEqual([1, 2, 3], [1, 2, 3]); // true
-areArraysEqual([1, 2, 3], [3, 2, 1]); // false
+function isArraysEqual(arr1, arr2) {
+  // Your code goes here
+}
+
+isArraysEqual([1, 2, 3], [1, 2, 3]); // true
+isArraysEqual([1, 2, 3], [3, 2, 1]); // false
 ```
 
 **TASK 14**
@@ -147,6 +199,10 @@ areArraysEqual([1, 2, 3], [3, 2, 1]); // false
 Sample Output:
 
 ```js
+function reverseArray(arr) {
+  // Your code goes here
+}
+
 reverseArray([1, 2, 3]); // [3, 2, 1]
 ```
 
@@ -157,6 +213,10 @@ reverseArray([1, 2, 3]); // [3, 2, 1]
 Sample Output:
 
 ```js
+function convertToNumber(str) {
+  // Your code goes here
+}
+
 convertToNumber("42"); // 42
 convertToNumber("abc"); // null
 ```
@@ -168,6 +228,10 @@ convertToNumber("abc"); // null
 Sample Output:
 
 ```js
+function isPalindrome(str) {
+  // Your code goes here
+}
+
 isPalindrome("madam"); // true
 isPalindrome("hello"); // false
 ```
@@ -179,6 +243,10 @@ isPalindrome("hello"); // false
 Sample Output:
 
 ```js
+function filterByType(arr, type) {
+  // Your code goes here
+}
+
 filterByType([1, "a", true], "string"); // ['a']
 ```
 
@@ -189,7 +257,11 @@ filterByType([1, "a", true], "string"); // ['a']
 Sample Output:
 
 ```js
-getValues([{ a: 1 }, { a: 2 }, { a: 3 }], "a"); // [1, 2, 3]
+function getValuesByKey(arr, key) {
+  // Your code goes here
+}
+
+getValuesByKey([{ a: 1 }, { a: 2 }, { a: 3 }], "a"); // [1, 2, 3]
 ```
 
 **TASK 19**
@@ -199,6 +271,10 @@ getValues([{ a: 1 }, { a: 2 }, { a: 3 }], "a"); // [1, 2, 3]
 Sample Output:
 
 ```js
+function sumArray(arr) {
+  // Your code goes here
+}
+
 sumArray([1, 2, 3]); // 6
 ```
 
@@ -209,5 +285,9 @@ sumArray([1, 2, 3]); // 6
 Sample Output:
 
 ```js
+function findMax(arr) {
+  // Your code goes here
+}
+
 findMax([1, 5, 3, 9, 2]); // 9
 ```
