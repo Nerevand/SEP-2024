@@ -1,9 +1,8 @@
 # JS Data types task
 
 1. Create a new branch from the current one _hw2_.
-2. Inside folder _homework2_, create a folder with your GitHub nickname or name.
-3. In that branch, create a few JS files with exercise numbers, for example task1.js, task2.js, etc.
-4. In those files, implement solutions for the tasks.
+2. In that branch, create a few JS files with exercise numbers, for example task1.js, task2.js, etc.
+3. In those files, implement solutions for the tasks.
 
 **TASK 1**
 
@@ -291,3 +290,12 @@ function findMax(arr) {
 
 findMax([1, 5, 3, 9, 2]); // 9
 ```
+
+4. once done, create pull request into current branch _hw2_
+
+## To read
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures - JS data types and data structures
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics - JS object basics
+- https://javascript.info/variables - JS Variables
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection - Garbage collection
