@@ -6,8 +6,7 @@ function isArraysEqual(arr1, arr2) {
     return false;
   }
 
-  const comparedArrays = arr1.every((value, index) => value === arr2[index]);
-  return comparedArrays;
+  return arr1.every((value, index) => value === arr2[index]);
 
   //   ES5
   //   if (arr1.length !== arr2.length) {
