@@ -1,8 +1,10 @@
 // Write a function that filters an array, leaving only elements of a certain type.
 
+const getType = require("./task1");
+
 function filterByType(arr, type) {
   //   ES6
-  return arr.filter((item) => typeof item === type);
+  return arr.filter((item) => getType(item) === type);
 
   //   ES5
   //   var filteredArr = [];

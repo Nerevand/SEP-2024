@@ -39,3 +39,5 @@ function getType(value) {
 
 getType(42); // 'number'
 getType("hello"); // 'string'
+
+module.exports = getType;
