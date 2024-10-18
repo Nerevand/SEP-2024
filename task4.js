@@ -2,7 +2,7 @@
 
 function deepCopy(obj) {
   //   structuredClone
-  let copiedObj = structuredClone(obj);
+  const copiedObj = structuredClone(obj);
   return copiedObj;
 
   //   or
@@ -18,3 +18,5 @@ function deepCopy(obj) {
 
 const obj = { a: 1, b: { c: 2 } };
 deepCopy(obj); // {a: 1, b: {c: 2}}
+
+module.exports = deepCopy;
