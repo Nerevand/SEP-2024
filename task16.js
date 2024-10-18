@@ -2,8 +2,10 @@
 
 function isPalindrome(str) {
   //   ES6
-  const reversedStr = str.split("").reverse().join("");
-  return str === reversedStr;
+  const strToCompare = str.toLowerCase();
+  const reversedStr = strToCompare.split("").reverse().join("");
+
+  return strToCompare === reversedStr;
 
   //   ES5
   //   var reversedStr = "";
