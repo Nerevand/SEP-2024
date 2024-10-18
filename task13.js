@@ -2,14 +2,14 @@
 
 function isArraysEqual(arr1, arr2) {
   //   ES6
-  if (arr1.length !== arr2.length) {
+  if (!arr1 || !arr2 || arr1.length !== arr2.length) {
     return false;
   }
 
   return arr1.every((value, index) => value === arr2[index]);
 
   //   ES5
-  //   if (arr1.length !== arr2.length) {
+  //   if (arr1?.length !== arr2?.length) {
   //     return false;
   //   }
   //   for (var i = 0; i < arr1.length; i++) {
