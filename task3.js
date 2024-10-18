@@ -1,6 +1,11 @@
 // Write a function that merges two arrays, removing duplicate elements.
 
 function mergeArrays(arr1, arr2) {
+  // Check for both ES6 and ES5
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return "Can't merge. Both arguments must be arrays.";
+  }
+
   //   ES6
   return [...new Set([...arr1, ...arr2])];
 
