@@ -20,9 +20,8 @@
 **TASK 2**
 
 > Write a Javascript function that take any set of numbers, and it will return their sum and print the original numbers and the sum.
-> Sample Output:  
-> Original array: [12, 34, 23, 56]    
-> Sum of the values of the above array: 125
+> Sample Output:     
+> Sum of the values: 125
 
 **TASK 3**
 
