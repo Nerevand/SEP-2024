@@ -92,5 +92,5 @@
 
 - https://www.programiz.com/javascript/operators - JS operators
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator - Conditional Statements
-- https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php- Loops js
+- https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php Loops js
 - https://www.w3schools.com/js/js_array_iteration.asp - Iterators: map, filter, reduce, each, every
