@@ -88,8 +88,6 @@
 
 5. once done, create pull request into current branch _hw3_
 
-## Deadline is 11:59pm of August 1
-
 ## To read
 
 - https://www.programiz.com/javascript/operators - JS operators
