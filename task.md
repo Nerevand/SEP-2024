@@ -1,301 +1,98 @@
-# JS Data types task
+# Operators, Statements and Syntax
 
-1. Create a new branch from the current one _hw2_.
+1. create a new branch from the current one _hw3_
 2. In that branch, create a few JS files with exercise numbers, for example task1.js, task2.js, etc.
 3. In those files, implement solutions for the tasks.
 
 **TASK 1**
 
-> Write a function that takes any value and returns its type as a string.
-
-Sample Output:
-
-```js
-function getType(value) {
-  // Your code goes here
-}
-
-getType(42); // 'number'
-getType("hello"); // 'string'
-```
+> Write a JavaScript program to pick a specified number of unique random elements from a given array (so that no element is selected more than once).
+> Sample Output:  
+> Original array:  
+> [12, 34, 23, 56]  
+> 2 random elements from the array.  
+> [34, 12]  
+> 3 random elements from the array.  
+> [56, 12, 34]
+>
+> If an element is already selected, it cannot be selected again.
 
 **TASK 2**
 
-> Write a function that takes a string and returns an array of individual characters from that string.
-
-Sample Output:
-
-```js
-function stringToArray(str) {
-  // Your code goes here
-}
-
-stringToArray("hello"); // ['h', 'e', 'l', 'l', 'o']
-```
+> Write a Javascript program to compute the sum of elements in a given array.  
+> Sample Output:  
+> Original array(array can be changed and function should return correct sum):  
+> [12, 34, 23, 56]  
+> Sum of the values of the above array:  
+> 125
 
 **TASK 3**
 
-> Write a function that merges two arrays, removing duplicate elements.
-
-Sample Output:
-
-```js
-function mergeArrays(arr1, arr2) {
-  // Your code goes here
-}
-
-mergeArrays([1, 2], [2, 3]); // [1, 2, 3]
-```
+> Write a Javascript program to split a delimited string into an array.  
+> Sample output:  
+> Original delimited string:  
+> “Red, Green, Blue, 1, White, 3, 4, 5, 7” String to arrays:  
+> ["Red", "Green", "Blue", "White"] > [1, 3, 4, 5, 7]
 
 **TASK 4**
 
-> Write a function that performs a deep copy of an object (without using JSON).
-
-Sample Output:
-
-```js
-function deepCopy(obj) {
-  // Your code goes here
-}
-
-const obj = { a: 1, b: { c: 2 } };
-deepCopy(obj); // {a: 1, b: {c: 2}}
-```
+> Write a function which returns a factorial of a given number with a loop.  
+> Sample output:  
+> getFactorial(5) => 120
 
 **TASK 5**
 
-> Write a function that takes an object and returns a new object with only the keys whose values are strings.
-
-Sample Output:
-
-```js
-function filterStrings(obj) {
-  // Your code goes here
-}
-
-filterStrings({ a: 1, b: "text", c: true }); // {b: 'text'}
-```
+> write a function which returns a Fibonacci value for a given number with a loop.  
+> Sample output:  
+> getFibonacci(10) => 55
 
 **TASK 6**
 
-> Write a function that takes an array of numbers and returns an array of strings, where each number is converted to a string.
-
-Sample Output:
-
-```js
-function convertNumbersToStrings(arr) {
-  // Your code goes here
-}
-
-convertNumbersToStrings([1, 2, 3]); // ['1', '2', '3']
-```
+> Task: Write a function checkEvenOdd(n) that uses a ternary operator to return 'Even' if the number is even and 'Odd' if it's odd.
+> Sample output:  
+> checkEvenOdd(5) => Odd
 
 **TASK 7**
 
-> Write a function that takes an array and returns an array of unique values.
-
-Sample Output:
-
-```js
-function getUnique(arr) {
-  // Your code goes here
-}
-
-getUnique([1, 2, 2, 3, 3]); // [1, 2, 3]
-```
+> Task: Write a function checkNumber(n) that returns 'Positive', 'Negative', or 'Zero' based on the input number.
+> Sample output:  
+> checkNumber(5) => Positive
+> checkNumber(0) => Zero
 
 **TASK 8**
 
-> Write a function that checks if a given value is an array.
-
-Sample Output:
-
-```js
-function isArray(value) {
-  // Your code goes here
-}
-
-isArray([1, 2, 3]); // true
-isArray("text"); // false
-```
+> Task: Write a function getDayName(day) that returns the name of the day for a number (1 = Monday, 7 = Sunday) using a switch statement.
+> Sample output:  
+> getDayName(1) => Monday
+> getDayName(20) => Invalid day
 
 **TASK 9**
 
-> Write a function that converts an object into an array of key-value pairs.
-
-Sample Output:
-
-```js
-function objectToPairs(obj) {
-  // Your code goes here
-}
-
-objectToPairs({ a: 1, b: 2 }); // [['a', 1], ['b', 2]]
-```
+> Task: Write a function printEvenNumbers(limit) that prints all even numbers from 1 to the given limit using a 'for' loop.
 
 **TASK 10**
 
-> Write a function that calculates the average of elements in an array.
-
-Sample Output:
-
-```js
-function getAverage(arr) {
-  // Your code goes here
-}
-
-getAverage([10, 20, 30]); // 20
-```
+> Task: Write a function countDown(n) that prints numbers from n to 1 using a 'while' loop.
 
 **TASK 11**
 
-> Write a function that merges two objects. If keys are the same, take values from the second object.
-
-Sample Output:
-
-```js
-function mergeObjects(obj1, obj2) {
-  // Your code goes here
-}
-
-mergeObjects({ a: 1, b: 2 }, { b: 3, c: 4 }); // {a: 1, b: 3, c: 4}
-```
+> Task: Write a function canDrive(age, hasLicense) that returns true if the person is 18 or older and has a valid license, otherwise false.
 
 **TASK 12**
 
-> Write a function that checks if an object is empty.
-
-Sample Output:
-
-```js
-function isEmptyObject(obj) {
-  // Your code goes here
-}
-
-isEmptyObject({}); // true
-isEmptyObject({ a: 1 }); // false
-```
+> Task: Write a function swap(a, b) that swaps two variables using array destructuring and return that variables
 
 **TASK 13**
 
-> Write a function that compares two arrays for equality (same elements in the same order).
+> Task: Write a function getUserEmail(user) that returns the email of the user if it exists, or 'Email not found' using optional chaining.
 
-Sample Output:
+5. once done, create pull request into current branch _hw3_
 
-```js
-function isArraysEqual(arr1, arr2) {
-  // Your code goes here
-}
-
-isArraysEqual([1, 2, 3], [1, 2, 3]); // true
-isArraysEqual([1, 2, 3], [3, 2, 1]); // false
-```
-
-**TASK 14**
-
-> Write a function that reverses an array without modifying the original array.
-
-Sample Output:
-
-```js
-function reverseArray(arr) {
-  // Your code goes here
-}
-
-reverseArray([1, 2, 3]); // [3, 2, 1]
-```
-
-**TASK 15**
-
-> Write a function that takes a string and converts it to a number. If the conversion is not possible, return null.
-
-Sample Output:
-
-```js
-function convertToNumber(str) {
-  // Your code goes here
-}
-
-convertToNumber("42"); // 42
-convertToNumber("abc"); // null
-```
-
-**TASK 16**
-
-> Write a function that checks if a string is a palindrome.
-
-Sample Output:
-
-```js
-function isPalindrome(str) {
-  // Your code goes here
-}
-
-isPalindrome("madam"); // true
-isPalindrome("hello"); // false
-```
-
-**TASK 17**
-
-> Write a function that filters an array, leaving only elements of a certain type.
-
-Sample Output:
-
-```js
-function filterByType(arr, type) {
-  // Your code goes here
-}
-
-filterByType([1, "a", true], "string"); // ['a']
-```
-
-**TASK 18**
-
-> Write a function that takes an array of objects and returns an array of values for a specific key.
-
-Sample Output:
-
-```js
-function getValuesByKey(arr, key) {
-  // Your code goes here
-}
-
-getValuesByKey([{ a: 1 }, { a: 2 }, { a: 3 }], "a"); // [1, 2, 3]
-```
-
-**TASK 19**
-
-> Write a recursive function that calculates the sum of numbers in an array.
-
-Sample Output:
-
-```js
-function sumArray(arr) {
-  // Your code goes here
-}
-
-sumArray([1, 2, 3]); // 6
-```
-
-**TASK 20**
-
-> Write a function that returns the largest number in an array.
-
-Sample Output:
-
-```js
-function findMax(arr) {
-  // Your code goes here
-}
-
-findMax([1, 5, 3, 9, 2]); // 9
-```
-
-4. once done, create pull request into current branch _hw2_
+## Deadline is 11:59pm of August 1
 
 ## To read
 
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures - JS data types and data structures
-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics - JS object basics
-- https://javascript.info/variables - JS Variables
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection - Garbage collection
+- https://www.programiz.com/javascript/operators - JS operators
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator - Conditional Statements
+- https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php- Loops js
+- https://www.w3schools.com/js/js_array_iteration.asp - Iterators: map, filter, reduce, each, every
