@@ -19,12 +19,10 @@
 
 **TASK 2**
 
-> Write a Javascript program to compute the sum of elements in a given array.  
+> Write a Javascript function that take any set of numbers, and it will return their sum and print the original numbers and the sum.
 > Sample Output:  
-> Original array(array can be changed and function should return correct sum):  
-> [12, 34, 23, 56]  
-> Sum of the values of the above array:  
-> 125
+> Original array: [12, 34, 23, 56]    
+> Sum of the values of the above array: 125
 
 **TASK 3**
 
@@ -63,8 +61,8 @@
 
 > Task: Write a function getDayName(day) that returns the name of the day for a number (1 = Monday, 7 = Sunday) using a switch statement.
 > Sample output:  
-> getDayName(1) => Monday
-> getDayName(20) => Invalid day
+> getDayName(1) => Monday  
+> getDayName(20) => Invalid day  
 
 **TASK 9**
 
