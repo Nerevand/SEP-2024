@@ -10,48 +10,31 @@
 //  If an element is already selected, it cannot be selected again.
 
 const findRandomElements = (arr, elemCount) => {
-  if (!Array.isArray(arr)) {
-    throw new Error("Array expected.");
+  switch (true) {
+    case !Array.isArray(arr):
+      throw new Error("Array expected.");
+    case !arr.length:
+      throw new Error("Array is empty.");
+    case elemCount > arr.length:
+      throw new Error(
+        "Provided number of requested elements is bigger, than array length."
+      );
+    case !Number.isInteger(elemCount) || elemCount <= 0:
+      throw new Error(
+        "Provided 'elemCount' value must be positive integer, grater or equal to 0."
+      );
   }
 
-  if (!arr.length) {
-    throw new Error("Array is empty.");
-  }
+  for (let currentIndex = arr.length - 1; currentIndex > 0; currentIndex--) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
 
-  if (elemCount > arr.length) {
-    throw new Error(
-      "Provided number of requested elements is bigger, than array length."
-    );
-  }
-
-  if (!Number.isInteger(elemCount) || elemCount <= 0) {
-    throw new Error(
-      "Provided 'elemCount' value must be positive integer, grater or equal to 0."
-    );
-  }
-
-  const uniqueElements = [...new Set(arr)];
-
-  if (uniqueElements.length < elemCount) {
-    throw new Error(
-      `Array has fewer unique elements than requested: only ${uniqueElements.length} out of ${elemCount}.`
-    );
-  }
-
-  for (
-    let currentIndex = uniqueElements.length - 1;
-    currentIndex > 0;
-    currentIndex--
-  ) {
-    const randomIndex = Math.floor(Math.random() * uniqueElements.length);
-
-    [uniqueElements[currentIndex], uniqueElements[randomIndex]] = [
-      uniqueElements[randomIndex],
-      uniqueElements[currentIndex],
+    [arr[currentIndex], arr[randomIndex]] = [
+      arr[randomIndex],
+      arr[currentIndex],
     ];
   }
 
-  return uniqueElements.slice(0, elemCount);
+  return arr.slice(0, elemCount);
 
   // or
 
