@@ -1,4 +1,4 @@
-# Operators, Statements and Syntax
+# Functions
 
 1. create a new branch from the current one _hw4_
 2. In that branch, create a few JS files with exercise numbers, for example task1.js, task2.js, etc.
