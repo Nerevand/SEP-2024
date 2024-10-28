@@ -23,78 +23,77 @@
 
 **TASK 2**
 
-> Write a Javascript program to compute the sum of elements in a given array.  
-> Sample Output:  
-> Original array(array can be changed and function should return correct sum):  
-> [12, 34, 23, 56]  
-> Sum of the values of the above array:  
-> 125
+> Create a function that takes a "base number" as an argument.  
+> // This function should return another function which takes a new argument,  
+> // and returns the sum of the "base number" and the new argument.
+>
+> function plusFactory(num) {  
+> // your code  
+> }
+>
+> const plusFive = plusFactory(5)  
+> plusFive(2) // ➞ 7  
+> const plusTen = plusFactory(10)  
+> plusTen(188) // ➞ 198  
+> plusFive(plusTen(0)) // ➞ 15
 
 **TASK 3**
 
-> Write a Javascript program to split a delimited string into an array.  
-> Sample output:  
-> Original delimited string:  
-> “Red, Green, Blue, 1, White, 3, 4, 5, 7” String to arrays:  
-> ["Red", "Green", "Blue", "White"] > [1, 3, 4, 5, 7]
+> 3.Create a function that takes a number as its parameter and returns another function.  
+> // The returned function must take an array of numbers as its parameter, and return an  
+> // array of the numbers divided by the number that was passed into the first function.
+>
+> function arrayDivisionFactory (num) {  
+> // your code  
+> }
+>
+> const divide5 = arrayDivisionFactory(5);  
+> console.log(divide5([10, 20, 25])) // [2, 4, 5]  
+> const divide3 = arrayDivisionFactory(3);  
+> console.log(divide3([6, 21, 27])) // [2, 7, 9]
 
 **TASK 4**
 
-> Write a function which returns a factorial of a given number with a loop.  
-> Sample output:  
-> getFactorial(5) => 120
+> Create a function that takes a string of name and checks how much good is the given name.  
+> // Add up the letters of your name to get the total score.
+>
+> const scores = {  
+> "A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,  
+> "H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,  
+> "N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,  
+> "T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23  
+> }
+>
+> // Return your result as per the following rules:  
+> // score <= 60: "NOT TOO GOOD"  
+> // 61 <= score <= 300: "PRETTY GOOD"  
+> // 301 <= score <= 599: "VERY GOOD"  
+> // score >= 600: "THE BEST"
+>
+> function getNameScore (name) {  
+>  // your code  
+> }
+>
+> console.log(getNameScore('robot')); //"Your score 979, which is THE BEST"  
+> console.log(getNameScore('man')); // "Your score 575, which is VERY GOOD"
 
 **TASK 5**
 
-> write a function which returns a Fibonacci value for a given number with a loop.  
-> Sample output:  
-> getFibonacci(10) => 55
+> Write a function that reverses all the words in a sentence that start with a particular letter.  
+> function specialReverse(string, letter) {  
+> // your code  
+> }
+>
+> console.log(specialReverse("word searches are super fun", "s")) //"word sehcraes are repus fun"  
+> console.log(specialReverse("first man to walk on the moon", "m")) //"first nam to walk on the noom"
 
-**TASK 6**
-
-> Task: Write a function checkEvenOdd(n) that uses a ternary operator to return 'Even' if the number is even and 'Odd' if it's odd.
-> Sample output:  
-> checkEvenOdd(5) => Odd
-
-**TASK 7**
-
-> Task: Write a function checkNumber(n) that returns 'Positive', 'Negative', or 'Zero' based on the input number.
-> Sample output:  
-> checkNumber(5) => Positive
-> checkNumber(0) => Zero
-
-**TASK 8**
-
-> Task: Write a function getDayName(day) that returns the name of the day for a number (1 = Monday, 7 = Sunday) using a switch statement.
-> Sample output:  
-> getDayName(1) => Monday
-> getDayName(20) => Invalid day
-
-**TASK 9**
-
-> Task: Write a function printEvenNumbers(limit) that prints all even numbers from 1 to the given limit using a 'for' loop.
-
-**TASK 10**
-
-> Task: Write a function countDown(n) that prints numbers from n to 1 using a 'while' loop.
-
-**TASK 11**
-
-> Task: Write a function canDrive(age, hasLicense) that returns true if the person is 18 or older and has a valid license, otherwise false.
-
-**TASK 12**
-
-> Task: Write a function swap(a, b) that swaps two variables using array destructuring and return that variables
-
-**TASK 13**
-
-> Task: Write a function getUserEmail(user) that returns the email of the user if it exists, or 'Email not found' using optional chaining.
-
-5. once done, create pull request into current branch _hw3_
+5. once done, create pull request into current branch _hw4_
 
 ## To read
 
-- https://www.programiz.com/javascript/operators - JS operators
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator - Conditional Statements
-- https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php Loops js
-- https://www.w3schools.com/js/js_array_iteration.asp - Iterators: map, filter, reduce, each, every
+- https://www.w3schools.com/js/js_function_definition.asp - Function definition
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function?retiredLocale=uk - Function declaration
+- https://www.w3schools.com/js/js_object_methods.asp - Object Methods
+- https://www.javascripttutorial.net/javascript-closure - closure
+- https://developer.mozilla.org/en-US/docs/Glossary/Scope?retiredLocale=uk - Scope
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this - This context
