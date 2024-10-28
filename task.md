@@ -1,21 +1,25 @@
 # Operators, Statements and Syntax
 
-1. create a new branch from the current one _hw3_
+1. create a new branch from the current one _hw4_
 2. In that branch, create a few JS files with exercise numbers, for example task1.js, task2.js, etc.
 3. In those files, implement solutions for the tasks.
 
 **TASK 1**
 
-> Write a JavaScript program to pick a specified number of unique random elements from a given array (so that no element is selected more than once).
-> Sample Output:  
-> Original array:  
-> [12, 34, 23, 56]  
-> 2 random elements from the array.  
-> [34, 12]  
-> 3 random elements from the array.  
-> [56, 12, 34]
->
-> If an element is already selected, it cannot be selected again.
+> Create function that unravels array of arrays like so:
+> const matrixArr = [
+> [1, 2, 3, 4], // → → → ↴
+> [12, 13, 14, 5], // ↱ → ↴ ↓
+> [11, 16, 15, 6], // ↑ ↑ ↲ ↓
+> [10, 9, 8, 7] // ↑ ← ← ↲
+> ];
+
+function unravelArr (arr) {
+// your code
+}
+
+console.log(unravelArr(matrixArr)); //[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+// NOTE: initial array should stay the same
 
 **TASK 2**
 
