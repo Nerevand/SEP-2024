@@ -8,7 +8,9 @@ const checkNumber = (n) => {
     throw new Error("Provided value must be a valid integer.");
   }
 
-  return n > 0 ? "Positive" : n < 0 ? "Negative" : "Zero";
+  if (n === 0) return "Zero";
+
+  return n < 0 ? "Negative" : "Positive";
 
   //   or
   //   const convertedNumber = Math.sign(n);
