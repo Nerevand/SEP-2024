@@ -12,12 +12,9 @@ const getFibonacci = (n) => {
 
   let a = 0;
   let b = 1;
-  let next;
 
   for (let i = 2; i <= n; i++) {
-    next = a + b;
-    a = b;
-    b = next;
+    [a, b] = [b, a + b];
   }
 
   return b;
