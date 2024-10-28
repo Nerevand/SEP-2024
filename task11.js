@@ -7,7 +7,7 @@ const canDrive = (age, hasLicense) => {
     );
   }
 
-  return age >= 18 && hasLicense ? true : false;
+  return age >= 18 && hasLicense;
 };
 
 canDrive(24, false);
