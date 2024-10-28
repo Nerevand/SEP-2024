@@ -12,11 +12,9 @@ const countDown = (n) => {
     );
   }
 
-  let start = n;
-
-  while (start > 0) {
-    console.log(start);
-    start--;
+  while (n > 0) {
+    console.log(n);
+    n--;
   }
 };
 
