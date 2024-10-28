@@ -4,12 +4,7 @@
 // getDayName(20) => Invalid day
 
 const getDayName = (day) => {
-  if (
-    typeof day !== "number" ||
-    Number.isNaN(day) ||
-    !Number.isInteger(day) ||
-    day < 0
-  ) {
+  if (typeof day !== "number" || !Number.isInteger(day)) {
     throw new Error("Provided value must be a valid positive integer.");
   }
 
