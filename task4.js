@@ -41,13 +41,25 @@ const scores = {
   Z: 23,
 };
 
+const getMessage = (score) => {
+  switch (true) {
+    case score <= 60:
+      return "NOT TOO GOOD";
+    case score <= 300:
+      return "PRETTY GOOD";
+    case score <= 599:
+      return "VERY GOOD";
+    default:
+      return "THE BEST";
+  }
+};
+
 function getNameScore(name) {
   if (!isValidStr(name)) {
     throw new Error("Value must be not empty string.");
   }
 
   let score = 0;
-  let result = "";
 
   for (const char of name?.toUpperCase().trim().split("")) {
     if (scores[char] === undefined) {
@@ -59,21 +71,7 @@ function getNameScore(name) {
     score += scores[char];
   }
 
-  switch (true) {
-    case score <= 60:
-      result = "NOT TOO GOOD";
-      break;
-    case score <= 300:
-      result = "PRETTY GOOD";
-      break;
-    case score <= 599:
-      result = "VERY GOOD";
-      break;
-    default:
-      result = "THE BEST";
-  }
-
-  return `Your score ${score}, which is ${result}`;
+  return `Your score ${score}, which is ${getMessage(score)}`;
 }
 
 console.log(getNameScore("robot"));
