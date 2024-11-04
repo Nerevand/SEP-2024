@@ -10,12 +10,15 @@ function specialReverse(string, letter) {
     throw new Error("Values must be not an empty strings.");
   }
 
-  return string?.replace(new RegExp(`\\b(${letter})\\w*`, "g"), (matchWord) => {
+  const wordStartsWithLetter = new RegExp(`\\b(${letter})\\w*`, "g");
+  const isUpperCaseLetter = /^[A-Z]$/.test(letter);
+
+  return string?.replace(wordStartsWithLetter, (matchWord) => {
     return matchWord
       .split("")
       .reverse()
       .map((char, index) => {
-        if (/^[A-Z]$/.test(letter)) {
+        if (isUpperCaseLetter) {
           return index === 0 ? char.toUpperCase() : char.toLowerCase();
         }
 
