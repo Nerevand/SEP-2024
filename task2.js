@@ -7,11 +7,17 @@
 
 const { isValidNumber } = require("./utils");
 
+const isPlusFactoryNumValid = (number) => {
+  if (!isValidNumber(number)) {
+    throw new Error("Provided value must be a number.");
+  }
+};
+
 function plusFactory(num) {
+  isPlusFactoryNumValid(num);
+
   return (num2) => {
-    if (!isValidNumber(num) || !isValidNumber(num2)) {
-      throw new Error("Provided values must be numbers.");
-    }
+    isPlusFactoryNumValid(num2);
 
     return num + num2;
   };
