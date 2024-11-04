@@ -49,7 +49,7 @@ function getNameScore(name) {
   let score = 0;
   let result = "";
 
-  for (let char of name?.toUpperCase().trim().split("")) {
+  for (const char of name?.toUpperCase().trim().split("")) {
     if (scores[char] === undefined) {
       throw new Error(
         `There is no provided score for such character as ${char}.`
