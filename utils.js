@@ -14,4 +14,14 @@ const calculateAge = (date) => {
   return Math.floor(age);
 };
 
-module.exports = { calculateAge };
+const validateUser = (obj) => {
+  if (!obj || typeof obj !== "object") {
+    throw new Error("User object must provided.");
+  }
+
+  if (!Object.keys(obj).length) {
+    throw new Error("User object is empty.");
+  }
+};
+
+module.exports = { calculateAge, validateUser };

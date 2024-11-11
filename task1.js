@@ -6,9 +6,11 @@
 // // NOTE: Please implement error handling in case if some fields are not available.
 
 const { SarahMay, JeremieBrown, Elizabeth } = require("./constants.js");
-const { calculateAge } = require("./utils.js");
+const { calculateAge, validateUser } = require("./utils.js");
 
 function PersonFunc(user) {
+  validateUser(user);
+
   this.user = user;
 }
 

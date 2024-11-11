@@ -2,10 +2,12 @@
 //  Don't forget to implement error handling in case if some fields are not available here as well.
 
 const { SarahMay, JeremieBrown, Elizabeth } = require("./constants.js");
-const { calculateAge } = require("./utils.js");
+const { calculateAge, validateUser } = require("./utils.js");
 
 class PersonClass {
   constructor(user) {
+    validateUser(user);
+
     this.user = user;
   }
 
