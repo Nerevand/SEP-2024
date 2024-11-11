@@ -47,8 +47,12 @@ const Elizabeth = {
   },
 };
 
+const DATE_DD_MM_YYYY_REGEX =
+  /^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(\d{4})$/;
+
 module.exports = {
   SarahMay,
   JeremieBrown,
   Elizabeth,
+  DATE_DD_MM_YYYY_REGEX,
 };

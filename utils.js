@@ -1,7 +1,7 @@
-const calculateAge = (date) => {
-  const dotDateFormat = /^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(\d{4})$/;
+const { DATE_DD_MM_YYYY_REGEX } = require("./constants");
 
-  if (!dotDateFormat.test(date)) {
+const calculateAge = (date) => {
+  if (!DATE_DD_MM_YYYY_REGEX.test(date)) {
     throw new Error("Provide birth date in format: DD.MM.YYYY.");
   }
 
