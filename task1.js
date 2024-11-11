@@ -43,8 +43,4 @@ const person1 = new PersonFunc(SarahMay);
 const person2 = new PersonFunc(JeremieBrown);
 const person3 = new PersonFunc(Elizabeth);
 
-console.log(person1.getFullAddress());
-console.log(person2.getFullAddress());
-console.log(person3.getFullAddress());
-
 module.exports = { PersonFunc };
