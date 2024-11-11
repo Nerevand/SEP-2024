@@ -6,20 +6,13 @@
 // // NOTE: Please implement error handling in case if some fields are not available.
 
 const { SarahMay, JeremieBrown, Elizabeth } = require("./constants.js");
-const { calculateAge, validateFields, validateField } = require("./utils.js");
+const { calculateAge } = require("./utils.js");
 
-function PersonFunc({ firstName, lastName, birthDate, address }) {
-  this.firstName = validateField(firstName, "firstName");
-  this.lastName = validateField(lastName, "lastName");
-  this.birthDate = birthDate;
-  this.address = validateFields(
-    address,
-    ["country", "city", "street", "house"],
-    ["apartment"]
-  );
+function PersonFunc(user) {
+  this.user = user;
 
   this.getFullName = function () {
-    const { firstName, lastName } = this;
+    const { firstName, lastName } = this.user;
 
     const isAnonimous =
       (firstName === "firstName is not provided" || !firstName) &&
@@ -29,13 +22,13 @@ function PersonFunc({ firstName, lastName, birthDate, address }) {
   };
 
   this.getAge = function () {
-    return this.birthDate
-      ? `${calculateAge(this.birthDate)} years`
-      : "age is unknown";
+    const { birthDate } = this.user;
+
+    return birthDate ? `${calculateAge(birthDate)} years` : "Age is unknown.";
   };
 
   this.getFullAddress = function () {
-    const { country, city, street, house, apartment } = this.address;
+    const { country, city, street, house, apartment } = this.user.address;
 
     return [
       country,
@@ -49,5 +42,9 @@ function PersonFunc({ firstName, lastName, birthDate, address }) {
 const person1 = new PersonFunc(SarahMay);
 const person2 = new PersonFunc(JeremieBrown);
 const person3 = new PersonFunc(Elizabeth);
+
+console.log(person1.getFullName());
+console.log(person2.getFullName());
+console.log(person3.getFullName());
 
 module.exports = { PersonFunc };
