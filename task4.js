@@ -3,26 +3,23 @@
 
 const { PersonClass } = require("./task3.js");
 const { SarahMay, JeremieBrown, Elizabeth } = require("./constants.js");
-const { validateFields } = require("./utils.js");
 
 class WorkingPersonClass extends PersonClass {
-  constructor({ firstName, lastName, birthDate, address, job }) {
-    super({ firstName, lastName, birthDate, address });
-
-    this.job = validateFields(job, ["title", "experience"]);
+  constructor(user) {
+    super(user);
   }
 
   getProfessionalNameAndRank() {
-    const { title, experience } = this.job;
+    const { title, experience } = this.user.job;
 
     const pluralizedYear = experience === 1 ? "year" : "years";
 
-    const showJobExperience =
-      typeof experience === "number"
-        ? `job experience ${experience} ${pluralizedYear}`
-        : experience;
-
-    return `${this.getFullName()}, ${title}, ${showJobExperience}`;
+    return [
+      this.getFullName(),
+      title && experience
+        ? `${title}, job experience ${experience} ${pluralizedYear}`
+        : "Can't get professional name and rank.",
+    ].join(", ");
   }
 }
 
