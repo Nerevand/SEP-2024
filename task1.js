@@ -28,12 +28,14 @@ function PersonFunc(user) {
   this.getFullAddress = function () {
     const { country, city, street, house, apartment } = this.user.address;
 
-    return [
-      country,
-      city,
-      street,
-      apartment ? `${house}/${apartment}` : house,
-    ].join(", ");
+    return country && city && street && house
+      ? [
+          country,
+          city,
+          street,
+          apartment ? `${house}/${apartment}` : house,
+        ].join(", ")
+      : "Can't get full address.";
   };
 }
 
@@ -41,8 +43,8 @@ const person1 = new PersonFunc(SarahMay);
 const person2 = new PersonFunc(JeremieBrown);
 const person3 = new PersonFunc(Elizabeth);
 
-console.log(person1.getFullName());
-console.log(person2.getFullName());
-console.log(person3.getFullName());
+console.log(person1.getFullAddress());
+console.log(person2.getFullAddress());
+console.log(person3.getFullAddress());
 
 module.exports = { PersonFunc };
