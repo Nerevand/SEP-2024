@@ -5,31 +5,25 @@
 
 const { PersonFunc } = require("./task1.js");
 const { SarahMay, JeremieBrown, Elizabeth } = require("./constants.js");
-const { validateFields } = require("./utils.js");
 
-function WorkingPersonFunc({ firstName, lastName, birthDate, address, job }) {
-  PersonFunc.call(this, {
-    firstName,
-    lastName,
-    birthDate,
-    address,
-  });
-
-  this.job = validateFields(job, ["title", "experience"]);
-
-  this.getProfessionalNameAndRank = function () {
-    const { title, experience } = this.job;
-
-    const pluralizedYear = experience === 1 ? "year" : "years";
-
-    const showJobExperience =
-      typeof experience === "number"
-        ? `job experience ${experience} ${pluralizedYear}`
-        : experience;
-
-    return [this.getFullName(), title, showJobExperience].join(", ");
-  };
+function WorkingPersonFunc(user) {
+  PersonFunc.call(this, user);
 }
+
+WorkingPersonFunc.prototype = Object.create(PersonFunc.prototype);
+
+WorkingPersonFunc.prototype.constructor = WorkingPersonFunc;
+
+WorkingPersonFunc.prototype.getProfessionalNameAndRank = function () {
+  const { title, experience } = this.user.job;
+
+  const showJobExperience =
+    typeof experience === "number"
+      ? `job experience ${experience} ${pluralizedYear}`
+      : experience;
+
+  return [this.getFullName(), title, showJobExperience].join(", ");
+};
 
 const workingPerson1 = new WorkingPersonFunc(SarahMay);
 const workingPerson2 = new WorkingPersonFunc(JeremieBrown);
