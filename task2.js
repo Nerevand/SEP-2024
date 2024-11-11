@@ -17,12 +17,14 @@ WorkingPersonFunc.prototype.constructor = WorkingPersonFunc;
 WorkingPersonFunc.prototype.getProfessionalNameAndRank = function () {
   const { title, experience } = this.user.job;
 
-  const showJobExperience =
-    typeof experience === "number"
-      ? `job experience ${experience} ${pluralizedYear}`
-      : experience;
+  const pluralizedYear = experience === 1 ? "year" : "years";
 
-  return [this.getFullName(), title, showJobExperience].join(", ");
+  return [
+    this.getFullName(),
+    title && experience
+      ? `${title}, job experience ${experience} ${pluralizedYear}`
+      : "Can't get professional name and rank.",
+  ].join(", ");
 };
 
 const workingPerson1 = new WorkingPersonFunc(SarahMay);
