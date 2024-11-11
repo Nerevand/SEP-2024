@@ -14,11 +14,9 @@ function PersonFunc(user) {
   this.getFullName = function () {
     const { firstName, lastName } = this.user;
 
-    const isAnonimous =
-      (firstName === "firstName is not provided" || !firstName) &&
-      (lastName === "lastName is not provided" || !lastName);
-
-    return !isAnonimous ? `${firstName} ${lastName}` : "anonimous person";
+    return firstName && lastName
+      ? `${firstName} ${lastName}`
+      : "Anonymous person.";
   };
 
   this.getAge = function () {
