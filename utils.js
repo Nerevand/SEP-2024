@@ -14,36 +14,4 @@ const calculateAge = (date) => {
   return Math.floor(age);
 };
 
-const validateField = (value, requiredField) => {
-  const isFalsyValue =
-    value === "" ||
-    value === null ||
-    value === undefined ||
-    value === false ||
-    Number.isNaN(value);
-
-  return isFalsyValue ? `${requiredField} is not provided` : value;
-};
-
-const validateFields = (obj, requiredFields, optionalFields = []) => {
-  if (!obj || typeof obj !== "object" || obj === null) {
-    throw new Error("An object should be provided.");
-  }
-
-  const validatedRequired = requiredFields.reduce((acc, currKey) => {
-    return {
-      ...acc,
-      [currKey]: validateField(obj[currKey], currKey),
-    };
-  }, {});
-
-  optionalFields.forEach((key) => {
-    if (obj.hasOwnProperty(key)) {
-      validatedRequired[key] = obj[key];
-    }
-  });
-
-  return validatedRequired;
-};
-
-module.exports = { calculateAge, validateFields, validateField };
+module.exports = { calculateAge };
