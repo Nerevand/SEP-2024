@@ -2,45 +2,38 @@
 //  Don't forget to implement error handling in case if some fields are not available here as well.
 
 const { SarahMay, JeremieBrown, Elizabeth } = require("./constants.js");
-const { calculateAge, validateFields, validateField } = require("./utils.js");
+const { calculateAge } = require("./utils.js");
 
 class PersonClass {
-  constructor({ firstName, lastName, birthDate, address }) {
-    this.firstName = validateField(firstName, "firstName");
-    this.lastName = validateField(lastName, "lastName");
-    this.birthDate = birthDate;
-    this.address = validateFields(
-      address,
-      ["country", "city", "street", "house"],
-      ["apartment"]
-    );
+  constructor(user) {
+    this.user = user;
   }
 
   getFullName() {
-    const { firstName, lastName } = this;
+    const { firstName, lastName } = this.user;
 
-    const isAnonimous =
-      (firstName === "firstName is not provided" || !firstName) &&
-      (lastName === "lastName is not provided" || !lastName);
-
-    return !isAnonimous ? `${firstName} ${lastName}` : "anonimous person";
+    return firstName && lastName
+      ? `${firstName} ${lastName}`
+      : "Anonymous person.";
   }
 
   getAge() {
-    return this.birthDate
-      ? `${calculateAge(this.birthDate)} years`
-      : "age is unknown";
+    const { birthDate } = this.user;
+
+    return birthDate ? `${calculateAge(birthDate)} years` : "Age is unknown.";
   }
 
   getFullAddress() {
-    const { country, city, street, house, apartment } = this.address;
+    const { country, city, street, house, apartment } = this.user.address;
 
-    return [
-      country,
-      city,
-      street,
-      apartment ? `${house}/${apartment}` : house,
-    ].join(", ");
+    return country && city && street && house
+      ? [
+          country,
+          city,
+          street,
+          apartment ? `${house}/${apartment}` : house,
+        ].join(", ")
+      : "Can't get full address.";
   }
 }
 
