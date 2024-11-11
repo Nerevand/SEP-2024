@@ -10,34 +10,31 @@ const { calculateAge } = require("./utils.js");
 
 function PersonFunc(user) {
   this.user = user;
-
-  this.getFullName = function () {
-    const { firstName, lastName } = this.user;
-
-    return firstName && lastName
-      ? `${firstName} ${lastName}`
-      : "Anonymous person.";
-  };
-
-  this.getAge = function () {
-    const { birthDate } = this.user;
-
-    return birthDate ? `${calculateAge(birthDate)} years` : "Age is unknown.";
-  };
-
-  this.getFullAddress = function () {
-    const { country, city, street, house, apartment } = this.user.address;
-
-    return country && city && street && house
-      ? [
-          country,
-          city,
-          street,
-          apartment ? `${house}/${apartment}` : house,
-        ].join(", ")
-      : "Can't get full address.";
-  };
 }
+
+PersonFunc.prototype.getFullName = function () {
+  const { firstName, lastName } = this.user;
+
+  return firstName && lastName
+    ? `${firstName} ${lastName}`
+    : "Anonymous person.";
+};
+
+PersonFunc.prototype.getAge = function () {
+  const { birthDate } = this.user;
+
+  return birthDate ? `${calculateAge(birthDate)} years` : "Age is unknown.";
+};
+
+PersonFunc.prototype.getFullAddress = function () {
+  const { country, city, street, house, apartment } = this.user.address;
+
+  return country && city && street && house
+    ? [country, city, street, apartment ? `${house}/${apartment}` : house].join(
+        ", "
+      )
+    : "Can't get full address.";
+};
 
 const person1 = new PersonFunc(SarahMay);
 const person2 = new PersonFunc(JeremieBrown);
