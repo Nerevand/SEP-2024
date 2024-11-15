@@ -1,0 +1,15 @@
+.cta {
+  display: grid;
+  grid-template-columns: minmax(348px, 41%) minmax(348px, 49%);
+  justify-content: space-between;
+  gap: 46px 0;
+  padding-bottom: 97px;
+}
+
+@media (max-width: 899px) {
+  .cta {
+    grid-template-columns: 1fr;
+    row-gap: 41px;
+    padding-bottom: 50px;
+  }
+}

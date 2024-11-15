@@ -1,0 +1,9 @@
+.copyright-text {
+  margin: 0;
+}
+
+@media (max-width: 899px) {
+  div .copyright-text {
+    font-size: 1.125rem;
+  }
+}

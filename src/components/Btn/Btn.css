@@ -1,0 +1,38 @@
+.btn,
+.MuiButton-root.btn {
+  font-family: var(--baloo-2-ff);
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  height: 50px;
+  width: 170px;
+  color: var(--main-background-color);
+  background: var(--accent-color);
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: background var(--transition);
+}
+
+.btn:hover,
+.MuiButton-root.btn:hover {
+  background: var(--hover-color);
+  cursor: pointer;
+}
+
+.btn-slim,
+.MuiButton-root.btn-slim {
+  height: 40px;
+  width: 150px;
+}
+
+.btn-large,
+.MuiButton-root.btn-large {
+  width: 320px;
+}
+
+@media (max-width: 899px) {
+  .btn,
+  .MuiButton-root.btn {
+    width: 100%;
+  }
+}

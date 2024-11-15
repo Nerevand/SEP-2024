@@ -1,0 +1,43 @@
+@import url("https://fonts.cdnfonts.com/css/baloo-2-2?styles=169607,80866,80865,80867");
+@import url("https://fonts.cdnfonts.com/css/baloo?styles=17013");
+
+:root {
+  --main-background-color: #ffffff;
+  --accent-color: #59abb0;
+  --hover-color: #60dfe8;
+  --text-color: #000000;
+
+  --baloo-ff: "Baloo", sans-serif;
+  --baloo-2-ff: "Baloo 2", sans-serif;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --transition: 0.2s ease-in-out;
+}
+
+body {
+  font-family: var(--baloo-2-ff);
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+  line-height: 1.6;
+  color: var(--text-color);
+  min-width: 390px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

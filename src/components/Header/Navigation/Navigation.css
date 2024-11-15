@@ -1,0 +1,28 @@
+.navigation {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 59px;
+}
+
+.navigation-link {
+  transition: text-shadow var(--transition);
+}
+
+.navigation-link:hover,
+.navigation-link.active {
+  text-shadow: 0.1px 0.1px 0 #000, -0.1px -0.1px 0 #000;
+}
+
+@media (max-width: 899px) {
+  .navigation {
+    display: block;
+    text-align: center;
+  }
+
+  .navigation-link {
+    display: block;
+    color: var(--main-background-color);
+    margin-bottom: 15px;
+  }
+}
