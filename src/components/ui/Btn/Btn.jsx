@@ -2,9 +2,9 @@ import { Button } from "@mui/material";
 
 import "./style.css";
 
-function Btn({ children, onClick, className = "", ...props }) {
+function Btn({ children, className = "", ...props }) {
   return (
-    <Button onClick={onClick} className={`btn ${className}`} {...props}>
+    <Button className={`btn ${className}`} {...props}>
       {children}
     </Button>
   );
