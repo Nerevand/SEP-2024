@@ -51,11 +51,6 @@ Create a simple web application that uses the JSONPlaceholder API to display use
 - Use `Axios` to handle API requests.
 - Implement routing for navigation between the main page and user details page.
 
-## **Deliverables**
-
-- A GitHub repository containing the project source code.
-- A README file with instructions on how to run the project locally.
-
 ## **Resources**
 
 - [JSONPlaceholder API Documentation](https://jsonplaceholder.typicode.com/)
