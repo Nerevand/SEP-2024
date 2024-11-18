@@ -1,0 +1,44 @@
+/* fontSize: "clamp(1.75rem, 1.6032rem + 0.6024vw, 2.25rem)" - to add style for h1 title without theme responsiveFontSizes */
+
+.cta-item {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+}
+
+.cta-item:nth-of-type(even) > .cta-item-text-content {
+  order: 1;
+  row-gap: 18px;
+}
+
+.cta-item-text-content {
+  display: grid;
+  gap: 30px 0;
+}
+
+.cta-item-text-content * {
+  margin: 0;
+}
+
+.cta-list {
+  padding-left: 25px;
+}
+
+.cta-list-item {
+  list-style: disc;
+}
+
+@media (max-width: 899px) {
+  .cta-item {
+    row-gap: 24px;
+  }
+
+  .cta-item-text-content {
+    row-gap: 12px;
+  }
+
+  .cta-item:nth-of-type(even) > .cta-item-text-content {
+    order: 0;
+  }
+}
