@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
+import Wrapper from "@common/Wrapper";
+
 import "./style.css";
 
 const BackLink = () => {
   return (
-    <div className="back">
+    <Wrapper className="back">
       <Link className="back-link" to="/">
         <img
           src="/images/arrow-back.svg"
@@ -13,7 +15,7 @@ const BackLink = () => {
         />
         Back
       </Link>
-    </div>
+    </Wrapper>
   );
 };
 
