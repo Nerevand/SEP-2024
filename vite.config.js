@@ -13,6 +13,8 @@ const aliases = {
   "@components": "./src/components",
   "@ui": "./src/components/ui",
   "@common": "./src/components/common",
+
+  "@hooks": "./src/hooks",
 };
 
 export default defineConfig({
