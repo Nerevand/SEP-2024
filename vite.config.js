@@ -4,10 +4,15 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 const aliases = {
-  "@theme": "./src/theme",
-  "@pages": "./src/pages",
-  "@components": "./src/components",
   "@constants": "./src/constants",
+  "@theme": "./src/theme",
+
+  "@layouts": "./src/layouts",
+  "@pages": "./src/pages",
+
+  "@components": "./src/components",
+  "@ui": "./src/components/ui",
+  "@common": "./src/components/common",
 };
 
 export default defineConfig({

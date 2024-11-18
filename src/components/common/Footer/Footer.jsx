@@ -1,7 +1,7 @@
-import Copyright from "./Copyright/Copyright";
-import Policies from "./Policies/Policies";
+import Copyright from "./Copyright";
+import Policies from "./Policies";
 
-import "./Footer.css";
+import "./style.css";
 
 const Footer = () => {
   return (

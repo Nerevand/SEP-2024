@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import { navigationList } from "@constants";
 
-import "./Navigation.css";
+import "./style.css";
 
 const Navigation = ({ closeMenu }) => {
   return (

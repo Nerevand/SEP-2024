@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { policiesLinks } from "@constants";
 
-import "./Policies.css";
+import "./style.css";
 
 const Policies = () => {
   return (

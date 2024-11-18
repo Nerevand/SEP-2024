@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./BackLink.css";
+import "./style.css";
 
 const BackLink = () => {
   return (

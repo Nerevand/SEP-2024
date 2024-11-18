@@ -1,6 +1,6 @@
 import cn from "classnames";
 
-import "./Burger.css";
+import "./style.css";
 
 const Burger = ({ toggleMenu, isMenuOpen }) => {
   return (

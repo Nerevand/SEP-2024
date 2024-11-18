@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./Logo.css";
+import "./style.css";
 
 const Logo = () => {
   return (

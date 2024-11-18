@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router";
 
+import { useLocation } from "react-router";
 import cn from "classnames";
 
-import Btn from "@components/Btn/Btn";
-import BackLink from "./BackLink/BackLink";
-import Logo from "./Logo/Logo";
-import Navigation from "./Navigation/Navigation";
-import Burger from "./Burger/Burger";
-
 import { routes } from "@constants";
+import Btn from "@ui/Btn";
 
-import "./Header.css";
+import BackLink from "./BackLink";
+import Burger from "./Burger";
+import Logo from "./Logo";
+import Navigation from "./Navigation";
+
+import "./style.css";
 
 const Header = () => {
   const location = useLocation();

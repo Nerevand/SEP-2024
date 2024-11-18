@@ -1,8 +1,7 @@
-import CtaItem from "@components/CtaItem/CtaItem";
+import CtaItem from "@components/CtaItem";
+import { ctaData } from "@constants";
 
-import { ctaData } from "../../constants";
-
-import "./Home.css";
+import "./style.css";
 
 const Home = () => {
   return (

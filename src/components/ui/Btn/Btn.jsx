@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-import "./Btn.css";
+import "./style.css";
 
 function Btn({ children, onClick, className = "", ...props }) {
   return (

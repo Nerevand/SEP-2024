@@ -1,4 +1,4 @@
-import "./CtaImage.css";
+import "./style.css";
 
 const CtaImage = ({ imgSrcSet, imgSrc, altText }) => {
   return (

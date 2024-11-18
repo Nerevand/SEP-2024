@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-import "./ErrorPage.css";
+import "./style.css";
 
 const ErrorPage = () => {
   return (

@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-import "./Copyright.css";
+import "./style.css";
 
 const Copyright = () => {
   return (

@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
-
 import cn from "classnames";
 
-import Btn from "@components/Btn/Btn";
-import CtaImage from "./CtaImage/CtaImage";
+import Btn from "@ui/Btn";
 
-import "./CtaItem.css";
+import CtaImage from "./CtaImage";
+
+import "./style.css";
 
 const CtaItem = ({
   title,
