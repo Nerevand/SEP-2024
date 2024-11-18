@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 import { navigationList } from "@constants";
@@ -19,6 +20,10 @@ const Navigation = ({ closeMenu }) => {
       ))}
     </nav>
   );
+};
+
+Navigation.propTypes = {
+  closeMenu: PropTypes.func.isRequired,
 };
 
 export default Navigation;

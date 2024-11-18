@@ -1,10 +1,9 @@
 import { useLocation } from "react-router";
-
 import cn from "classnames";
 
 import { routes } from "@constants";
-import Btn from "@ui/Btn";
 import usePageLogic from "@hooks/usePageLogic";
+import Btn from "@ui/Btn";
 
 import BackLink from "./BackLink";
 import Burger from "./Burger";

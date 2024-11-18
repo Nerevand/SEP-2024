@@ -1,6 +1,12 @@
+import PropTypes from "prop-types";
+
 import "./style.css";
 
-const CtaImage = ({ imgSrcSet, imgSrc, altText }) => {
+const CtaImage = ({
+  imgSrcSet,
+  imgSrc,
+  altText = "Image could not be loaded.",
+}) => {
   return (
     <div className="cta-image">
       <picture>
@@ -9,6 +15,12 @@ const CtaImage = ({ imgSrcSet, imgSrc, altText }) => {
       </picture>
     </div>
   );
+};
+
+CtaImage.propTypes = {
+  imgSrcSet: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  altText: PropTypes.string,
 };
 
 export default CtaImage;

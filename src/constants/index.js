@@ -28,7 +28,7 @@ export const policiesLinks = [
 export const ctaData = [
   {
     title: "Desperate to learn drawing? We’ll teach you!",
-    isBigTitle: true,
+    titleVariant: "h1",
     description:
       "Our school has more than 20 years of experience in teaching people who always thought that they don’t have even a slightest hint of a talent. Some other descriptive stuff that I’m too lazy to make up.",
     listDescription: "With us you will get:",
@@ -40,7 +40,6 @@ export const ctaData = [
     ],
     btnText: "Apply now",
     isBtnBig: true,
-    btnClass: "btn--big",
     imgSrcSet: "/images/desktop/paris_1.webp",
     imgSrc: "/images/mobile/paris_1.webp",
     altText:

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 
 import "./style.css";
@@ -9,5 +10,10 @@ function Btn({ children, className = "", ...props }) {
     </Button>
   );
 }
+
+Btn.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
 
 export default Btn;

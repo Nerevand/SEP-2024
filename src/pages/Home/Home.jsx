@@ -1,5 +1,5 @@
-import CtaItem from "@components/CtaItem";
 import { ctaData } from "@constants";
+import CtaItem from "@components/CtaItem";
 
 import "./style.css";
 
@@ -10,7 +10,7 @@ const Home = () => {
         (
           {
             title,
-            isBigTitle,
+            titleVariant,
             description,
             listItems,
             listDescription,
@@ -25,7 +25,7 @@ const Home = () => {
           <CtaItem
             key={index}
             title={title}
-            isBigTitle={isBigTitle}
+            titleVariant={titleVariant}
             description={description}
             listItems={listItems}
             listDescription={listDescription}
