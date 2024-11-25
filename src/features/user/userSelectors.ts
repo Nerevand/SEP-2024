@@ -44,8 +44,9 @@ export const selectTotalPages = createSelector(
     Math.ceil(filteredUsers.length / itemsPerPage),
 );
 
-export const selectUsersLoading = (state: RootState): boolean =>
-  state.users.isLoading;
-
-export const selectUsersIsError = (state: RootState): boolean =>
-  state.users.isError;
+export const selectUsersState = (
+  state: RootState,
+): { isLoading: boolean; isError: boolean } => ({
+  isLoading: state.users.isLoading,
+  isError: state.users.isError,
+});

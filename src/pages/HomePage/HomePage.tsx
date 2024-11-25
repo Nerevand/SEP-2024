@@ -1,8 +1,5 @@
 import { useAppDispatch, useAppSelector } from "@hooks/useAppStore";
-import {
-  selectUsersIsError,
-  selectUsersLoading,
-} from "@features/user/userSelectors";
+import { selectUsersState } from "@features/user/userSelectors";
 import UsersTable from "@components/UsersTable";
 import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
@@ -12,10 +9,9 @@ import { fetchUsers } from "@features/user/userSlice";
 const HomePage: React.FC = () => {
   const dispatch = useAppDispatch();
 
-  //@comment: both of this value u get from state.users. U can do it in one line
+  //+@comment: both of this value u get from state.users. U can do it in one line
   // const { isLoading, isError } = useAppSelector(selectUsersState)
-  const isLoading = useAppSelector(selectUsersLoading);
-  const isError = useAppSelector(selectUsersIsError);
+  const { isLoading, isError } = useAppSelector(selectUsersState);
 
   if (isLoading) return <Loader />;
   if (isError)

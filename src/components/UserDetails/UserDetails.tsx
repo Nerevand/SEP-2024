@@ -2,11 +2,7 @@ import { useParams } from "react-router-dom";
 
 import { IUser } from "@types";
 import { useAppSelector } from "@hooks/useAppStore";
-import {
-  selectUsers,
-  selectUsersIsError,
-  selectUsersLoading,
-} from "@features/user/userSelectors";
+import { selectUsers, selectUsersState } from "@features/user/userSelectors";
 import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
 
@@ -41,9 +37,8 @@ const UserDetails: React.FC = () => {
   const user =
     users?.find((user: IUser) => user.id === Number(userId)) || INITIAL_USER;
 
-  //@comment: same as for HomePage
-  const isLoading = useAppSelector(selectUsersLoading);
-  const isError = useAppSelector(selectUsersIsError);
+  //+@comment: same as for HomePage
+  const { isLoading, isError } = useAppSelector(selectUsersState);
 
   const {
     name,
