@@ -6,6 +6,10 @@ import { setSearchUser } from "@features/user/userSlice";
 import Button from "@components/ui/Button";
 import Input from "@components/ui/Input";
 
+//@comment: same as pagination. U create it as component that we can reuse, but connect it only with users
+// i mean if i need that component on some another page it will not work there(for example for request with some /cars e.t.c)
+// Rewrite it and make it independent from slices, states e.t.c. Only using props
+
 const SearchForm = (): JSX.Element => {
   const dispatch = useAppDispatch();
 

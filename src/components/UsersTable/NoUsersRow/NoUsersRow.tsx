@@ -1,5 +1,6 @@
 import ErrorMessage from "@components/common/ErrorMessage";
 
+//@comment: NoUsersRow - bad naming. It is EmptyState 
 const NoUsersRow = (): JSX.Element => {
   return (
     <tr>

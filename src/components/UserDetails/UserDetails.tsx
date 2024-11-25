@@ -37,9 +37,12 @@ const UserDetails = (): JSX.Element => {
 
   const users = useAppSelector(selectUsers);
 
+
+  //@comment: u don't need to search this user. U have userId. Create a request this this id to /users/id
   const user =
     users?.find((user: IUser) => user.id === Number(userId)) || INITIAL_USER;
 
+  //@comment: same as for HomePage
   const isLoading = useAppSelector(selectUsersLoading);
   const isError = useAppSelector(selectUsersIsError);
 
@@ -53,6 +56,8 @@ const UserDetails = (): JSX.Element => {
     address: { street, suite, city, zipcode },
   } = user as IUser;
 
+  //@comment: for cases like that, where u create some blocks u can use some helper and put all logic in that helper.
+  // also do it after all IF's and add memoization
   const userDetails: IUserDetails[] = [
     {
       title: "Personal Info",

@@ -1,3 +1,4 @@
+//@comment: u don't need to create it inside components folder.It is detailed page and should be here
 import UserDetails from "@components/UserDetails";
 
 const UserDetailsPage = (): JSX.Element => {

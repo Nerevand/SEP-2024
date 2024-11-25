@@ -12,6 +12,8 @@ import { fetchUsers } from "@features/user/userSlice";
 const HomePage = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
+  //@comment: both of this value u get from state.users. U can do it in one line
+  // const { isLoading, isError } = useAppSelector(selectUsersState)
   const isLoading = useAppSelector(selectUsersLoading);
   const isError = useAppSelector(selectUsersIsError);
 

@@ -6,6 +6,8 @@ import { selectPaginatedUsers } from "@features/user/userSelectors";
 import TableRow from "./TableRow";
 import NoUsersRow from "./NoUsersRow";
 
+//@comment. It is not global component. That table works only with users data. Rewrite it and make more flexible
+
 const UsersTable = () => {
   const navigate = useNavigate();
 
