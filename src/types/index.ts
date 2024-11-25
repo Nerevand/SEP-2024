@@ -25,3 +25,12 @@ interface ICompany {
   catchPhrase: string;
   bs: string;
 }
+
+export interface IUserDetails {
+  title: string;
+  details: IDetails[];
+}
+export interface IDetails {
+  label: string;
+  value: string;
+}

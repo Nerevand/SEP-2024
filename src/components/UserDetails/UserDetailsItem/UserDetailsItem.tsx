@@ -1,5 +1,6 @@
 import React from "react";
-import { IDetails, IUserDetails } from "../UserDetails";
+
+import { IDetails, IUserDetails } from "@types";
 
 const UserDetailsItem: React.FC<IUserDetails> = ({ title, details }) => {
   return (

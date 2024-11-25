@@ -8,7 +8,8 @@ const aliases: AliasOptions = {
   "@components": path.resolve(__dirname, "src/components"),
   "@types": path.resolve(__dirname, "src/types/index"),
   "@hooks": path.resolve(__dirname, "src/hooks"),
-  "@constants": path.resolve(__dirname, "src/constants"),
+  "@helpers": path.resolve(__dirname, "src/helpers"),
+  "@constants": path.resolve(__dirname, "src/constants/index"),
   "@store": path.resolve(__dirname, "src/app/store"),
   "@features": path.resolve(__dirname, "src/features"),
 };

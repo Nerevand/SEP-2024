@@ -5,7 +5,7 @@ import { IUser } from "@types";
 // import { mockUsersData } from "./mockUsersData";
 import { fetchUsersAPI } from "./userAPI";
 
-interface UserState {
+interface IUserState {
   users: IUser[];
   currentPage: number;
   itemsPerPage: number;
@@ -15,7 +15,7 @@ interface UserState {
   isError: boolean;
 }
 
-const initialState: UserState = {
+const initialState: IUserState = {
   users: [],
   currentPage: 1,
   itemsPerPage: 10,

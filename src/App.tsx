@@ -35,7 +35,7 @@ const routes: RouteObject[] = [
       {
         path: "/user/:userId",
         element: <UserDetailsPage />,
-        loader: fetchUsersLoader,
+        // loader: fetchUsersLoader,
       },
       { path: "*", element: <ErrorPage /> },
     ],
