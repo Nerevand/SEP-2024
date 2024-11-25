@@ -12,8 +12,8 @@ const Header: React.FC = () => {
       {location.pathname === "/" ? (
         <SearchForm />
       ) : (
-        //@comment for navigation back u can use navigate(-1). Because now it looks like "go home" btn
-        <Button onClick={() => navigate("/")}>Back</Button>
+        //+@comment for navigation back u can use navigate(-1). Because now it looks like "go home" btn
+        <Button onClick={() => navigate(-1)}>Back</Button>
       )}
     </header>
   );
