@@ -4,7 +4,7 @@ import { useAppSelector } from "@hooks/useAppStore";
 import { selectPaginatedUsers } from "@features/user/userSelectors";
 
 import TableRow from "./TableRow";
-import NoUsersRow from "./NoUsersRow";
+import EmptyState from "./EmptyState";
 
 //@comment. It is not global component. That table works only with users data. Rewrite it and make more flexible
 
@@ -45,7 +45,7 @@ const UsersTable: React.FC = () => {
               <TableRow key={user.id} user={user} onClick={handleClick} />
             ))
           ) : (
-            <NoUsersRow />
+            <EmptyState />
           )}
         </tbody>
       </table>

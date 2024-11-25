@@ -1,8 +1,8 @@
 import ErrorMessage from "@components/common/ErrorMessage";
 import React from "react";
 
-//@comment: NoUsersRow - bad naming. It is EmptyState
-const NoUsersRow: React.FC = () => {
+//+@comment: NoUsersRow - bad naming. It is EmptyState
+const EmptyState: React.FC = () => {
   return (
     <tr>
       <td colSpan={5} className="px-2 py-2 text-sm md:px-4 md:text-base">
@@ -14,4 +14,4 @@ const NoUsersRow: React.FC = () => {
   );
 };
 
-export default NoUsersRow;
+export default EmptyState;
