@@ -1,8 +1,7 @@
 import axios from "axios";
 
+import { IUser } from "@types";
 import { JSONPLACEHOLDER_BASE_URL } from "@constants/api";
-
-import { IUser } from "./userTypes";
 
 export const fetchUsersAPI = async (): Promise<IUser[]> => {
   try {

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
+import { IUser } from "@types";
 import { useAppSelector } from "@hooks/useAppStore";
-import { IUser } from "@features/user/userTypes";
 import {
   selectUsers,
   selectUsersIsError,
@@ -11,7 +11,6 @@ import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
 
 import UserDetailsItem from "./UserDetailsItem";
-import React from "react";
 
 export interface IUserDetails {
   title: string;

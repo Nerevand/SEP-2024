@@ -1,8 +1,7 @@
 import { createSelector } from "@reduxjs/toolkit";
 
+import { IUser } from "@types";
 import { RootState } from "@store";
-
-import { IUser } from "./userTypes";
 
 export const selectUsers = (state: RootState): IUser[] => state.users.users;
 

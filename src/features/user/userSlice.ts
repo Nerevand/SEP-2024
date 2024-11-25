@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 
+import { IUser } from "@types";
+
 // import { mockUsersData } from "./mockUsersData";
 import { fetchUsersAPI } from "./userAPI";
-import { IUser } from "./userTypes";
 
 interface UserState {
   users: IUser[];

@@ -6,6 +6,7 @@ const aliases: AliasOptions = {
   "@layouts": path.resolve(__dirname, "src/layouts"),
   "@pages": path.resolve(__dirname, "src/pages"),
   "@components": path.resolve(__dirname, "src/components"),
+  "@types": path.resolve(__dirname, "src/types/index"),
   "@hooks": path.resolve(__dirname, "src/hooks"),
   "@constants": path.resolve(__dirname, "src/constants"),
   "@store": path.resolve(__dirname, "src/app/store"),

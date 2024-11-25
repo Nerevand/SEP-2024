@@ -1,5 +1,3 @@
-
-//@comment: for types u can create folder src/types or src/interfaces and put all global types there
 export interface IUser {
   id: number;
   name: string;

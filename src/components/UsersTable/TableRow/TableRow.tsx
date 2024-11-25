@@ -1,4 +1,4 @@
-import { IUser } from "@features/user/userTypes";
+import { IUser } from "@types";
 
 interface ITableRowProps {
   user: IUser;
