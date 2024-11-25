@@ -44,7 +44,7 @@ const routes: RouteObject[] = [
 
 const router = createBrowserRouter(routes);
 
-//@comment: for React Components u can use React.FC. But for this case JSX is possible
+//+@comment: for React Components u can use React.FC. But for this case JSX is possible
 const App: React.FC = () => {
   return (
     <Provider store={store}>
