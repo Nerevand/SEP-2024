@@ -5,7 +5,10 @@ interface ITableRowProps {
   onClick: (id: number) => void;
 }
 
-const TableRow = ({ user, onClick }: ITableRowProps): JSX.Element => {
+const TableRow: React.FC<ITableRowProps> = ({
+  user,
+  onClick,
+}: ITableRowProps) => {
   const { id, name, username, email, company } = user;
 
   return (

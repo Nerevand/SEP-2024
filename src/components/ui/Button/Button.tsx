@@ -6,14 +6,14 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "submit" | "reset" | "button";
 }
 
-//@comment: use React.FC. 
+//+@comment: use React.FC.
 
-const Button = ({
+const Button: React.FC<IButtonProps> = ({
   children,
   className,
   type = "button",
   ...props
-}: IButtonProps): JSX.Element => {
+}) => {
   return (
     <button
       type={type}

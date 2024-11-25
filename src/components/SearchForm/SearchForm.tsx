@@ -10,7 +10,7 @@ import Input from "@components/ui/Input";
 // i mean if i need that component on some another page it will not work there(for example for request with some /cars e.t.c)
 // Rewrite it and make it independent from slices, states e.t.c. Only using props
 
-const SearchForm = (): JSX.Element => {
+const SearchForm: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const searchInput = useAppSelector(selectSearchUser);

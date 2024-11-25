@@ -7,9 +7,9 @@ import {
 import { setCurrentPage } from "@features/user/userSlice";
 import Button from "@components/ui/Button";
 
-//@comment: it is not common component. Because u connect it for users. Rewrite and make it more flexible 
+//@comment: it is not common component. Because u connect it for users. Rewrite and make it more flexible
 
-const Pagination = (): JSX.Element => {
+const Pagination: React.FC = () => {
   const dispatch = useAppDispatch();
 
   // const filteredUsers = useAppSelector(selectFilteredUsers);

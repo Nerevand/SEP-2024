@@ -1,6 +1,7 @@
+import React from "react";
 import { IDetails, IUserDetails } from "../UserDetails";
 
-const UserDetailsItem = ({ title, details }: IUserDetails): JSX.Element => {
+const UserDetailsItem: React.FC<IUserDetails> = ({ title, details }) => {
   return (
     <div className="border p-3 shadow-sm sm:p-6">
       <h3 className="mb-2 border-b pb-3 text-xl font-semibold md:mb-4 lg:text-2xl">

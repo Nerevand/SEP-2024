@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Button from "@components/ui/Button";
 import SearchForm from "@components/SearchForm";
 
-const Header = (): JSX.Element => {
+const Header: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 

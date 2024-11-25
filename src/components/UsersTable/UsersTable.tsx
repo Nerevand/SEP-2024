@@ -8,7 +8,7 @@ import NoUsersRow from "./NoUsersRow";
 
 //@comment. It is not global component. That table works only with users data. Rewrite it and make more flexible
 
-const UsersTable = () => {
+const UsersTable: React.FC = () => {
   const navigate = useNavigate();
 
   const paginatedUsers = useAppSelector(selectPaginatedUsers);
@@ -22,19 +22,19 @@ const UsersTable = () => {
       <table className="min-w-full table-fixed border-collapse cursor-default text-left">
         <thead>
           <tr>
-            <th className="bg-gainsboro border-b px-2 py-3 text-sm sm:text-base md:px-4 md:py-4">
+            <th className="border-b bg-gainsboro px-2 py-3 text-sm sm:text-base md:px-4 md:py-4">
               ID
             </th>
-            <th className="bg-gainsboro border-b px-2 py-3 text-sm sm:text-base md:px-4 md:py-4">
+            <th className="border-b bg-gainsboro px-2 py-3 text-sm sm:text-base md:px-4 md:py-4">
               Name
             </th>
-            <th className="bg-gainsboro hidden border-b px-2 py-3 text-sm sm:text-base md:px-4 md:py-4 lg:table-cell">
+            <th className="hidden border-b bg-gainsboro px-2 py-3 text-sm sm:text-base md:px-4 md:py-4 lg:table-cell">
               Username
             </th>
-            <th className="bg-gainsboro hidden border-b px-2 py-3 text-sm sm:text-base md:table-cell md:px-4 md:py-4">
+            <th className="hidden border-b bg-gainsboro px-2 py-3 text-sm sm:text-base md:table-cell md:px-4 md:py-4">
               Email
             </th>
-            <th className="bg-gainsboro border-b px-2 py-3 text-sm sm:text-base md:px-4 md:py-4">
+            <th className="border-b bg-gainsboro px-2 py-3 text-sm sm:text-base md:px-4 md:py-4">
               Company Name
             </th>
           </tr>

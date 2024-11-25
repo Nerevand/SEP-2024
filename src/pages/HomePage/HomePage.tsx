@@ -9,7 +9,7 @@ import ErrorMessage from "@components/common/ErrorMessage";
 import Pagination from "@components/common/Pagination";
 import { fetchUsers } from "@features/user/userSlice";
 
-const HomePage = (): JSX.Element => {
+const HomePage: React.FC = () => {
   const dispatch = useAppDispatch();
 
   //@comment: both of this value u get from state.users. U can do it in one line

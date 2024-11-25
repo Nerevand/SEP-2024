@@ -1,6 +1,6 @@
 import ErrorMessage from "@components/common/ErrorMessage";
 
-const ErrorPage = (): JSX.Element => {
+const ErrorPage: React.FC = () => {
   return (
     <section className="flex grow">
       <ErrorMessage className="text-xl font-semibold md:text-2xl">

@@ -11,6 +11,7 @@ import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
 
 import UserDetailsItem from "./UserDetailsItem";
+import React from "react";
 
 export interface IUserDetails {
   title: string;
@@ -32,11 +33,10 @@ const INITIAL_USER = {
   address: { street: "", suite: "", city: "", zipcode: "" },
 };
 
-const UserDetails = (): JSX.Element => {
+const UserDetails: React.FC = () => {
   const { userId } = useParams<{ userId: string }>();
 
   const users = useAppSelector(selectUsers);
-
 
   //@comment: u don't need to search this user. U have userId. Create a request this this id to /users/id
   const user =
