@@ -1,20 +1,19 @@
-import { useAppDispatch, useAppSelector } from "@hooks/useAppStore";
-import {
-  selectCurrentPage,
-  selectTotalPages,
-  // selectFilteredUsers,
-} from "@features/user/userSelectors";
+import { useAppDispatch } from "@hooks/useAppStore";
 import { setCurrentPage } from "@features/user/userSlice";
 import Button from "@components/ui/Button";
 
-//@comment: it is not common component. Because u connect it for users. Rewrite and make it more flexible
+//+@comment: it is not common component. Because u connect it for users. Rewrite and make it more flexible
 
-const Pagination: React.FC = () => {
+interface IPaginationProps {
+  totalPages: number;
+  currentPage: number;
+}
+
+const Pagination: React.FC<IPaginationProps> = ({
+  totalPages,
+  currentPage,
+}) => {
   const dispatch = useAppDispatch();
-
-  // const filteredUsers = useAppSelector(selectFilteredUsers);
-  const totalPages = useAppSelector(selectTotalPages);
-  const currentPage = useAppSelector(selectCurrentPage);
 
   const handlePageChange = (page: number): void => {
     if (page >= 1 && page <= totalPages) {
@@ -31,8 +30,7 @@ const Pagination: React.FC = () => {
         Prev
       </Button>
       <span className="text-sm md:text-base">
-        {/* Page {!filteredUsers.length ? 0 : currentPage} of {totalPages} */}
-        Page {currentPage} of {totalPages}
+        Page {totalPages === 0 ? 0 : currentPage} of {totalPages}
       </span>
       <Button
         onClick={() => handlePageChange(currentPage + 1)}

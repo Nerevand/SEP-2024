@@ -1,17 +1,22 @@
 import { useAppDispatch, useAppSelector } from "@hooks/useAppStore";
-import { selectUsersState } from "@features/user/userSelectors";
+import { fetchUsers } from "@features/user/userSlice";
+import {
+  selectCurrentPage,
+  selectTotalPages,
+  selectUsersState,
+} from "@features/user/userSelectors";
 import UsersTable from "@components/UsersTable";
 import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
-import Pagination from "@components/common/Pagination";
-import { fetchUsers } from "@features/user/userSlice";
+import Pagination from "@components/Pagination";
 
 const HomePage: React.FC = () => {
   const dispatch = useAppDispatch();
 
   //+@comment: both of this value u get from state.users. U can do it in one line
-  // const { isLoading, isError } = useAppSelector(selectUsersState)
   const { isLoading, isError } = useAppSelector(selectUsersState);
+  const totalPages = useAppSelector(selectTotalPages);
+  const currentPage = useAppSelector(selectCurrentPage);
 
   if (isLoading) return <Loader />;
   if (isError)
@@ -32,7 +37,7 @@ const HomePage: React.FC = () => {
   return (
     <section className="flex flex-grow flex-col justify-between">
       <UsersTable />
-      <Pagination />
+      <Pagination totalPages={totalPages} currentPage={currentPage} />
     </section>
   );
 };
