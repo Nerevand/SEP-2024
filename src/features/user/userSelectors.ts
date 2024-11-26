@@ -3,7 +3,18 @@ import { createSelector } from "@reduxjs/toolkit";
 import { IUser } from "@types";
 import { RootState } from "@store";
 
-export const selectUsers = (state: RootState): IUser[] => state.users.users;
+export const selectUsersState = createSelector(
+  [
+    (state: RootState) => state.users.users,
+    (state: RootState) => state.users.isLoading,
+    (state: RootState) => state.users.isError,
+  ],
+  (users: IUser[], isLoading: boolean, isError: boolean) => ({
+    users,
+    isLoading,
+    isError,
+  }),
+);
 
 export const selectCurrentPage = (state: RootState): number =>
   state.users.currentPage;
@@ -43,10 +54,3 @@ export const selectTotalPages = createSelector(
   (filteredUsers, itemsPerPage): number =>
     Math.ceil(filteredUsers.length / itemsPerPage),
 );
-
-export const selectUsersState = (
-  state: RootState,
-): { isLoading: boolean; isError: boolean } => ({
-  isLoading: state.users.isLoading,
-  isError: state.users.isError,
-});

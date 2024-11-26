@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@hooks/useAppStore";
 import { formatUserDetails } from "@helpers/formatUserDetails";
 import { fetchUserById } from "@features/user/userDetailsSlice";
+import { selectUserDetailsState } from "@features/user/userDetailsSelectors";
 import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
 import DetailsItem from "@components/DetailsItem";
@@ -14,9 +15,7 @@ const UserDetailsPage: React.FC = () => {
 
   const dispatch = useAppDispatch();
 
-  const { user, isLoading, isError } = useAppSelector(
-    (state) => state.userDetails,
-  );
+  const { user, isLoading, isError } = useAppSelector(selectUserDetailsState);
 
   //+@comment: u don't need to search this user. U have userId. Create a request this this id to /users/id
 
@@ -24,10 +23,9 @@ const UserDetailsPage: React.FC = () => {
     if (userId) {
       dispatch(fetchUserById(Number(userId)));
     }
-  }, [dispatch, fetchUserById, userId]);
+  }, [dispatch, userId]);
 
   //+@comment: same as for HomePage
-  //+ const { isLoading, isError } = useAppSelector(selectUsersState);
 
   if (isLoading) return <Loader />;
   if (isError) return <ErrorMessage>Error loading user details.</ErrorMessage>;

@@ -1,17 +1,32 @@
 import { useNavigate } from "react-router-dom";
 
-import { useAppSelector } from "@hooks/useAppStore";
-import { selectPaginatedUsers } from "@features/user/userSelectors";
+import { useAppDispatch, useAppSelector } from "@hooks/useAppStore";
+import { fetchUsers } from "@features/user/userSlice";
+import {
+  selectPaginatedUsers,
+  selectUsersState,
+} from "@features/user/userSelectors";
 
 import TableRow from "./TableRow";
 import EmptyState from "./EmptyState";
+import { useEffect } from "react";
 
 //@comment. It is not global component. That table works only with users data. Rewrite it and make more flexible
 
 const UsersTable: React.FC = () => {
   const navigate = useNavigate();
 
+  const dispatch = useAppDispatch();
+
+  const { users, isLoading } = useAppSelector(selectUsersState);
+
   const paginatedUsers = useAppSelector(selectPaginatedUsers);
+
+  useEffect(() => {
+    if (!isLoading && !users.length) {
+      dispatch(fetchUsers());
+    }
+  }, [dispatch]);
 
   const handleClick = (id: number): void => {
     navigate(`/user/${id}`);
