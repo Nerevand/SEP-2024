@@ -34,3 +34,7 @@ export interface IDetails {
   label: string;
   value: string;
 }
+
+export type Row = { id: string | number } & Record<string, string | number>;
+export type Column = { label: string; key: string };
+export type TableRowClick = (id: number | string) => void;
