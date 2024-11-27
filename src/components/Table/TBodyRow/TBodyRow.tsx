@@ -10,7 +10,7 @@ const TBodyRow: React.FC<ITableRowProps> = ({
   rowItem,
   columns,
   onRowClick,
-}: ITableRowProps) => {
+}) => {
   return (
     <tr
       onClick={() => onRowClick?.(rowItem?.id)}

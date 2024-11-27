@@ -1,4 +1,3 @@
-//+@comment: u don't need to create it inside components folder.It is detailed page and should be here
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -8,7 +7,8 @@ import { fetchUserById } from "@features/user/userDetailsSlice";
 import { selectUserDetailsState } from "@features/user/userDetailsSelectors";
 import Loader from "@components/common/Loader";
 import ErrorMessage from "@components/common/ErrorMessage";
-import DetailsItem from "@components/DetailsItem";
+
+import DetailsItem from "./DetailsItem";
 
 const UserDetailsPage: React.FC = () => {
   const { userId } = useParams<{ userId: string }>();
@@ -17,15 +17,11 @@ const UserDetailsPage: React.FC = () => {
 
   const { user, isLoading, isError } = useAppSelector(selectUserDetailsState);
 
-  //+@comment: u don't need to search this user. U have userId. Create a request this this id to /users/id
-
   useEffect(() => {
     if (userId) {
       dispatch(fetchUserById(Number(userId)));
     }
   }, [dispatch, userId]);
-
-  //+@comment: same as for HomePage
 
   if (isLoading) return <Loader />;
   if (isError) return <ErrorMessage>Error loading user details.</ErrorMessage>;

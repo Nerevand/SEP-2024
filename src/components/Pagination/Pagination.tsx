@@ -2,8 +2,6 @@ import { useAppDispatch } from "@hooks/useAppStore";
 import { setCurrentPage } from "@features/user/userSlice";
 import Button from "@components/ui/Button";
 
-//+@comment: it is not common component. Because u connect it for users. Rewrite and make it more flexible
-
 interface IPaginationProps {
   totalPages: number;
   currentPage: number;

@@ -11,8 +11,6 @@ export const formatUserDetails = (user: IUser): IUserDetails[] => {
     address: { street, suite, city, zipcode },
   } = user;
 
-  //+@comment: for cases like that, where u create some blocks u can use some helper and put all logic in that helper.
-  // +also do it after all IF's and add memoization
   return [
     {
       title: "Personal Info",

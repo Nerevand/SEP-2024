@@ -6,8 +6,6 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "submit" | "reset" | "button";
 }
 
-//+@comment: use React.FC.
-
 const Button: React.FC<IButtonProps> = ({
   children,
   className,

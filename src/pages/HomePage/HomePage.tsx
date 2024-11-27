@@ -24,8 +24,6 @@ const HomePage: React.FC = () => {
   const currentPage = useAppSelector(selectCurrentPage);
   const paginatedUsers = useAppSelector(selectPaginatedUsers);
 
-  const { headingData, tableData } = formatTableData(paginatedUsers);
-
   useEffect(() => {
     if (!isLoading && !users.length) {
       dispatch(fetchUsers());
@@ -51,6 +49,8 @@ const HomePage: React.FC = () => {
         </span>
       </ErrorMessage>
     );
+
+  const { headingData, tableData } = formatTableData(paginatedUsers);
 
   return (
     <section className="flex flex-grow flex-col justify-between">
