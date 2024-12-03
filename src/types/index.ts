@@ -1,3 +1,9 @@
+export type Routes = {
+  HOME: string;
+  DETAILS: string;
+  ERROR: string;
+};
+
 export interface IUser {
   id: number;
   name: string;

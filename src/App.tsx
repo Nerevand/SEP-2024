@@ -6,6 +6,7 @@ import {
 import { Provider } from "react-redux";
 
 import { store } from "@store";
+import { ROUTES } from "@constants";
 import Layout from "@layouts/Layout";
 import ErrorPage from "@pages/ErrorPage";
 import HomePage from "@pages/HomePage";
@@ -13,15 +14,15 @@ import UserDetailsPage from "@pages/UserDetailsPage";
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: ROUTES.HOME,
     element: <Layout />,
     children: [
-      { path: "/", element: <HomePage /> },
+      { path: ROUTES.HOME, element: <HomePage /> },
       {
-        path: "/user/:userId",
+        path: ROUTES.DETAILS,
         element: <UserDetailsPage />,
       },
-      { path: "*", element: <ErrorPage /> },
+      { path: ROUTES.ERROR, element: <ErrorPage /> },
     ],
   },
 ];
