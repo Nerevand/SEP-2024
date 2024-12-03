@@ -1,5 +1,3 @@
-import React from "react";
-
 import { IDetails, IUserDetails } from "@types";
 
 const DetailsItem: React.FC<IUserDetails> = ({ title, details }) => {
