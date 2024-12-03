@@ -21,7 +21,7 @@ export const fetchUsersAPI = async (): Promise<IUser[]> => {
   }
 };
 
-export const fetchUserByIdAPI = async (userId: number): Promise<IUser> => {
+export const fetchUserByIdAPI = async (userId: string): Promise<IUser> => {
   try {
     const { data } = await axios.get<IUser>(
       `${JSONPLACEHOLDER_BASE_URL}/users/${userId}`,

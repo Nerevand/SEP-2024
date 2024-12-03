@@ -17,10 +17,10 @@ const initialState: IUserDetailsState = {
   isError: false,
 };
 
-export const fetchUserById = createAsyncThunk<IUser, number>(
+export const fetchUserById = createAsyncThunk<IUser, string>(
   "userDetails/fetchUserById",
-  async (userId: number) => {
-    return await fetchUserByIdAPI(Number(userId));
+  async (userId: string) => {
+    return await fetchUserByIdAPI(userId);
   },
 );
 

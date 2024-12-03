@@ -19,7 +19,7 @@ const UserDetailsPage: React.FC = () => {
 
   useEffect(() => {
     if (userId) {
-      dispatch(fetchUserById(Number(userId)));
+      dispatch(fetchUserById(userId));
     }
   }, [dispatch, userId]);
 
