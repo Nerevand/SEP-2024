@@ -13,7 +13,7 @@ interface IUserDetailsState {
 
 const initialState: IUserDetailsState = {
   user: INITIAL_USER,
-  isLoading: false,
+  isLoading: true,
   isError: false,
 };
 
@@ -31,7 +31,6 @@ const userDetailsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchUserById.pending, (state) => {
-        state.isLoading = true;
         state.isError = false;
       })
       .addCase(

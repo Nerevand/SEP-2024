@@ -21,7 +21,7 @@ const initialState: IUserState = {
   itemsPerPage: 10,
   totalPages: 0,
   searchUser: "",
-  isLoading: false,
+  isLoading: true,
   isError: false,
 };
 
@@ -51,7 +51,6 @@ const userSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchUsers.pending, (state) => {
-        state.isLoading = true;
         state.isError = false;
       })
       .addCase(

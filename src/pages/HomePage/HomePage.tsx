@@ -24,11 +24,13 @@ const HomePage: React.FC = () => {
   const currentPage = useAppSelector(selectCurrentPage);
   const paginatedUsers = useAppSelector(selectPaginatedUsers);
 
+  const fetchUsersData = (): void => {
+    dispatch(fetchUsers());
+  };
+
   useEffect(() => {
-    if (!isLoading && !users.length) {
-      dispatch(fetchUsers());
-    }
-  }, [dispatch]);
+    fetchUsersData();
+  }, []);
 
   const handleClick = (id: string | number): void => {
     navigate(`/user/${id}`);
@@ -40,10 +42,7 @@ const HomePage: React.FC = () => {
       <ErrorMessage className="text-center">
         Failed loading users.
         <span className="mt-2 block cursor-pointer text-gray-500">
-          <span
-            onClick={() => dispatch(fetchUsers())}
-            className="inline-block border-b"
-          >
+          <span onClick={fetchUsersData} className="inline-block border-b">
             Try again
           </span>
         </span>
@@ -54,8 +53,16 @@ const HomePage: React.FC = () => {
 
   return (
     <section className="flex flex-grow flex-col justify-between">
-      <Table onRowClick={handleClick} columns={headingData} rows={tableData} />
-      <Pagination totalPages={totalPages} currentPage={currentPage} />
+      {users.length > 0 && (
+        <>
+          <Table
+            onRowClick={handleClick}
+            columns={headingData}
+            rows={tableData}
+          />
+          <Pagination totalPages={totalPages} currentPage={currentPage} />
+        </>
+      )}
     </section>
   );
 };
